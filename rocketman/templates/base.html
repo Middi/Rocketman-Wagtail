@@ -28,18 +28,23 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {% include  "includes/header.html" %}
+
         {% block banner %}{% endblock %}
         
         <main class="container my-4" id="content" role="main">
             
             {% block content %}{% endblock %}
 
-            {# Global javascript #}
-            <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
-
-            {% block extra_js %}
-                {# Override this in templates to add extra javascript #}
-            {% endblock %}
         </main>
+
+        {% include  "includes/footer.html" %}
+
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
     </body>
 </html>
