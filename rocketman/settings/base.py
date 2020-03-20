@@ -27,9 +27,12 @@ INSTALLED_APPS = [
     'home',
     'search',
     'services',
+    'flex',
+    'testimonials',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.modeladmin',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',

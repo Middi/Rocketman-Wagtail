@@ -5,7 +5,6 @@ from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 
-
 class ServiceListingPage(Page):
 
     subtitle = models.TextField(
@@ -20,6 +19,8 @@ class ServiceListingPage(Page):
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
         context['services'] = ServicePage.objects.live().public()
+        space_company = 'x'
+        # import pudb; pu.db()
         return context
 
 
